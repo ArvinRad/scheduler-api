@@ -53,7 +53,7 @@ module.exports = (db, updateAppointment) => {
 
   router.delete("/appointments/:id", (request, response) => {
     if (process.env.TEST_ERROR) {
-      setTimeout(() => response.status(500).json({}), 1000);
+      setTimeout(() => response.status(500).json({}), 5000);
       return;
     }
 
